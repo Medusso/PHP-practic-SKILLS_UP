@@ -46,7 +46,7 @@ function validar_name($name){
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     print_r ($_POST);
-    if(!empty($_POST["name"]) || !empty($_POST["email"]) || !empty($_POST["phone"])){
+    if(!empty($_POST["name"]) || !empty($_POST["email"]) || !empty($_POST["phone"]))
         
         $name= limpiar_dato($_POST["name"]);
         $email= limpiar_dato($_POST["email"]);
@@ -69,6 +69,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 } else{
                     $phone_err = true;
                 }
+            }
         if (validar_name($name) || validar_email($email) || validar_phone($Phone)){
         
                 //Ver si las variables tienen valor, contenido.
@@ -124,5 +125,4 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         }
     }
 
-}
 ?>
